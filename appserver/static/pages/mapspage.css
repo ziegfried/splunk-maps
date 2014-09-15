@@ -1,0 +1,47 @@
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    height: 100%;
+    min-height: 500px;
+    background-image: linear-gradient(#e0e0e0, #f5f5f5 400px, #f5f5f5);
+    background-repeat: no-repeat;
+    margin-top: -8px;
+}
+
+#searchbar {
+    padding: 20px 0 0 0;
+    position: relative;
+    height: 75px;
+}
+
+#searchbar .shared-searchbar {
+    margin: 0 15px;
+}
+
+#searchbar .dropdown-toggle-search-mode {
+    display: none;
+}
+
+#map {
+    min-height: 200px;
+    height: 100%;
+    background: #fff;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f5f5f5;
+}
+
+.footer .shared-footer {
+    padding: 7px 20px;
+}
+
+.footer .shared-footer .nav-footer {
+    margin-bottom: 8px;
+}

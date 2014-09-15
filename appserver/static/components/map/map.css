@@ -1,0 +1,14 @@
+/* Leaflet overrides */
+.splunk-map .leaflet-control-layers, .splunk-map .leaflet-bar {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.splunk-map .leaflet-bar a {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

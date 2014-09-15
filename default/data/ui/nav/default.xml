@@ -1,0 +1,5 @@
+<nav search_view="maps" color="#EE8800">
+  <view name="maps" default="true" />
+  <view name="reports" />
+  <view name="dashboards" />
+</nav>
