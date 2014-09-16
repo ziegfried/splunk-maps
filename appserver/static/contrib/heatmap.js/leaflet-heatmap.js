@@ -80,8 +80,12 @@ var HeatmapOverlay = L.Layer.extend({
         if (!this._map) {
             return;
         }
-        if (createHeatmap && !this._heatmap) {
-            this._heatmap = h337.create(this.cfg);
+        if (!this._heatmap) {
+            if (createHeatmap) {
+                this._heatmap = h337.create(this.cfg);
+            } else {
+                return;
+            }
         }
 
         var point = this._map.latLngToContainerPoint(this._origin);
