@@ -2,10 +2,21 @@
 
 cd $(dirname $0)
 echo In $PWD
+
+mkdir -p tmp
+rm -rf tmp/*
+mkdir -p dist
+mkdir -p tmp/maps
+
+cp -r appserver default metadata static README.md tmp/maps/
+
 VERSION=$(cat default/app.conf | grep "version =" | sed -e 's/version = //g')
-DEST_FILENAME="maps-$VERSION-$(date +%Y%m%d).spl"
+DEST_FILENAME="maps-$VERSION-$(git rev-parse --short HEAD).spl"
 echo $DEST_FILENAME
 
-cd ..
+cd tmp
 
-COPYFILE_DISABLE=1 tar cvfz $DEST_FILENAME --exclude='*.iml' --exclude='.idea' --exclude='.*' --exclude='*.pxm' --exclude='.git/*' maps
+COPYFILE_DISABLE=1 tar cvfz ../dist/$DEST_FILENAME --exclude='metadata/local.meta' --exclude='.*' --exclude='*.pxm' maps
+
+# Clean up tmp directory
+rm -rf *

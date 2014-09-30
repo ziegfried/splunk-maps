@@ -2,3 +2,5 @@
 maps.iml
 local/*
 metadata/local.meta
+tmp/*
+dist/*
